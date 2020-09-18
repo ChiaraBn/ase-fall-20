@@ -6,14 +6,17 @@ def sum (m, n):
         for i in range (abs(n)):
             result = result - 1
     else:
-        for  i in range (1, n):
-            m = m + 1    
-    
+        for i in range (n):
+            result = result + 1
+
     return result
 
 
 # Substract n from m until it gets to 0
 def divide (m, n):
+    if n == 0:
+        raise ZeroDivisionError
+
     result = 0
     negative = m > 0 and n < 0 or m < 0 and n > 0
     n = abs (n)
